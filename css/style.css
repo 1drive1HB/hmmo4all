@@ -1,122 +1,142 @@
 /* Reset styles */
-body {
+* {
   margin: 0;
-  font-family: 'MedievalSharp', cursive; /* Medieval-styled font */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'MedievalSharp', cursive;
   color: antiquewhite;
   text-align: center;
-  background: url('/assets/cropped-hmmo3IMG.jpg') no-repeat center center/cover; /* Responsive medieval background */
-  min-height: 100vh;
+  background: url('/assets/cropped-hmmo3IMG.jpg') no-repeat center center/cover;
+  min-height: 0vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-attachment: fixed; /* Ensure the background stays fixed during scrolling */
+  justify-content: space-between; /* Prevent overlaps */
+  background-attachment: fixed;
 }
 
 /* Header styles */
 .header {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Align to the center */
-  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  margin-bottom: 50px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
   position: fixed;
   top: 0;
-  border: 10px solid rgba(42, 26, 8, 0.55); /* Border around the header */
-  z-index: 100; /* Ensure header stays above other content */
+  z-index: 10;
+  border-bottom: 5px solid rgba(42, 26, 8, 0.7);
 }
 
 .header h1 {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  padding: 15px 0;
-  width: 100%;
-  color: antiquewhite; /* Medieval color tone */
-  font-size: 28px; /* Adjust font size for emphasis */
-  font-family: 'MedievalSharp', cursive; /* Medieval-styled font */
-  text-shadow: 2px 2px 4px black; /* Add a slight shadow for depth */
+  font-size: 30px;
+  text-shadow: 2px 2px 4px black;
+}
+
+.header p {
+  font-size: 16px;
+  margin-top: 5px;
+  text-shadow: 1px 1px 2px black;
 }
 
 /* Transparent container styles */
 .transparent-container {
-  background: rgba(42, 26, 8, 0.85); /* Semi-transparent black */
-  padding: 40px;
+  background: rgba(42, 26, 8, 0.85);
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  max-width: 600px;
-  min-width: 450px;
-  min-height: 150px;
-  text-align: center;
-  margin-top: 120px; /* Adjusted to prevent overlap with header */
-  margin-bottom: 15px; /* Centered with margin-bottom adjustment */
+  max-width: 800px;
+  min-width: 650px;
+  max-height: 800px;
+  min-height: 200px;
+  margin: 60px auto 15px; /* Prevent overlap with header and footer */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-.transparent-container h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: antiquewhite;
-  text-shadow: 2px 2px 4px black; /* Add text shadow for better readability */
+.transparent-container h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
 }
 
 .transparent-container p {
-  font-size: 20px;
-  color: antiquewhite;
-  line-height: 1.6;
-  text-shadow: 1px 1px 2px black; /* Subtle text shadow */
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.transparent-container a {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  background: #795649;
+  color: #f4e5c3;
+  text-decoration: none;
+  border: 2px solid #c0a080;
+  border-radius: 5px;
+  font-size: 18px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.transparent-container a:hover {
+  background: #8a6e2f;
+  transform: scale(1.05);
 }
 
 /* Footer styles */
 .footer {
-  background: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
-  padding: 20px 30px;
-  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 20px;
   text-align: center;
   position: fixed;
   bottom: 0;
-  left: 0;
-  z-index: 100; /* Ensure the footer layers above other content */
-  border: 5px solid rgba(42, 26, 8, 0.85); /* Border around the footer */
+  width: 100%;
+  z-index: 10;
+  border-top: 2px solid rgba(42, 26, 8, 0.7);
 }
 
 .footer p {
-  color: antiquewhite; /* Medieval color tone */
-  font-size: 16px;
-  font-family: 'MedievalSharp', cursive; /* Medieval-styled font */
-  text-shadow: 1px 1px 2px black; /* Subtle text shadow */
-  margin: 0;
+  font-size: 14px;
+  margin: 5px 0;
+  text-shadow: 1px 1px 2px black;
+}
+
+.footer a {
+  color: antiquewhite;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive adjustments */
-@media screen and (max-width: 768px) {
-  .header {
-    padding: 10px 20px;
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 20px;
   }
 
-  .header h1 {
-    font-size: 22px;
-    padding: 10px 0;
+  .header p {
+    font-size: 14px;
   }
 
   .transparent-container {
-    padding: 20px;
-    margin-top: 120px; /* Centered with respect to the fixed header */
+    padding: 15px;
+    margin: 120px auto 80px;
     max-width: 90%;
   }
 
-  .transparent-container h1 {
-    font-size: 28px;
+  .transparent-container h3 {
+    font-size: 20px;
   }
 
-  .transparent-container p {
-    font-size: 18px;
+  .transparent-container p,
+  .footer p {
+    font-size: 14px;
   }
-}
 
-/* Horizontal screen adjustments */
-@media screen and (orientation: landscape) {
-  .transparent-container {
-    margin-top: 100px; /* Adjusted margin for landscape */
+  .transparent-container a {
+    font-size: 16px;
+    padding: 8px 15px;
   }
 }
