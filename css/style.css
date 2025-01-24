@@ -17,14 +17,14 @@ body {
 .header {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align to the left */
+  align-items: center; /* Align to the center */
   padding: 15px 30px;
   width: 100%;
   background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
   position: fixed;
   top: 0;
-  left: 0;
-  z-index: 100;
+  border: 10px solid rgba(42, 26, 8, 0.55); /* Border around the header */
+  z-index: 100; /* Ensure header stays above other content */
 }
 
 .header h1 {
@@ -46,8 +46,11 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   max-width: 600px;
+  min-width: 450px;
+  min-height: 150px;
   text-align: center;
-  margin-top: 20px; /* To prevent overlapping with the fixed header */
+  margin-top: 120px; /* Adjusted to prevent overlap with header */
+  margin-bottom: 15px; /* Centered with margin-bottom adjustment */
 }
 
 .transparent-container h1 {
@@ -64,6 +67,27 @@ body {
   text-shadow: 1px 1px 2px black; /* Subtle text shadow */
 }
 
+/* Footer styles */
+.footer {
+  background: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
+  padding: 20px 30px;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Ensure the footer layers above other content */
+  border: 5px solid rgba(42, 26, 8, 0.85); /* Border around the footer */
+}
+
+.footer p {
+  color: antiquewhite; /* Medieval color tone */
+  font-size: 16px;
+  font-family: 'MedievalSharp', cursive; /* Medieval-styled font */
+  text-shadow: 1px 1px 2px black; /* Subtle text shadow */
+  margin: 0;
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
   .header {
@@ -77,7 +101,7 @@ body {
 
   .transparent-container {
     padding: 20px;
-    margin-top: 100px;
+    margin-top: 120px; /* Centered with respect to the fixed header */
     max-width: 90%;
   }
 
@@ -87,5 +111,12 @@ body {
 
   .transparent-container p {
     font-size: 18px;
+  }
+}
+
+/* Horizontal screen adjustments */
+@media screen and (orientation: landscape) {
+  .transparent-container {
+    margin-top: 100px; /* Adjusted margin for landscape */
   }
 }
