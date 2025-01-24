@@ -9,8 +9,7 @@ body {
   font-family: 'MedievalSharp', cursive;
   color: antiquewhite;
   text-align: center;
-  background: url('../assets/hmmo169ratio.jpg') no-repeat center center/cover; /* Using /assets */
-  
+  background-image: url("../assets/hmmo169ratio.jpg");
   min-height: 100vh;
   display: flex;
   flex-direction: column;
