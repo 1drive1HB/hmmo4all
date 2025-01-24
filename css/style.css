@@ -12,7 +12,8 @@ body {
   background-image: url('/assets/hmmo169ratio.jpg'); /* Using /assets */
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;  min-height: 100vh;
+  background-size: cover;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Prevent overlaps */
