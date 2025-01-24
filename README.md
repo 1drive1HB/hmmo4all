@@ -2,7 +2,9 @@
 
 Welcome to FREE_HMMO3_4ALL, your ultimate destination for Heroes of Might and Magic III HD Complete Edition with HOTA multiplayer. Download, play, and enjoy the classic game with enhanced features and multiplayer capabilities.
 
-![HMMO3 Screenshot](assets/scrHM3.png)
+![HMMO3 Screenshot](/assets/scrHM3.png)
+
+[Link: ]
 
 ## Features
 - **FREE DOWNLOAD**: Access the complete edition of Heroes of Might and Magic III HD for free.
