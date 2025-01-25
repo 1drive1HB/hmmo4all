@@ -9,7 +9,7 @@ body {
   font-family: 'MedievalSharp', cursive;
   color: antiquewhite;
   text-align: center;
-  background-image: url("../css/hmmo169ratio.jpg");
+  background-image: url("../src/hmmo169ratio.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -19,11 +19,12 @@ body {
   justify-content: space-between; /* Prevent overlaps */
   background-attachment: fixed;
 }
+
 /* Header styles */
 .header {
   background: rgba(0, 0, 0, 0.75);
   padding: 15px;
-  margin-bottom: 50px;
+  margin: auto;
   width: 100%;
   position: fixed;
   top: 0;
@@ -32,7 +33,6 @@ body {
 }
 
 .header h1 {
-  /* font-family: 'Uncial Antiqua', cursive !important;  */
   font-size: 30px;
   text-shadow: 2px 2px 4px black;
 }
@@ -52,14 +52,11 @@ body {
   min-width: 650px;
   max-height: 800px;
   min-height: 200px;
-  margin: 90px auto 30px; 
+  margin: 10px auto; /* Center horizontally */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   border: 4px solid rgba(42, 26, 8, 0.90);
 }
 
-.transparent-container + .transparent-container {
-  margin-top: 20px; /* Space between two transparent containers */
-}
 
 .transparent-container h3 {
   font-size: 22px;
@@ -118,50 +115,4 @@ body {
 
 .footer a:hover {
   text-decoration: underline;
-}
-
-/* Animation */
-@keyframes slide-up {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .header h1 {
-    font-size: 20px;
-  }
-
-  .header p {
-    font-size: 14px;
-  }
-
-  .transparent-container {
-    padding: 15px;
-    margin: 120px auto 40px; /* Adjusted for mobile view */
-    max-width: 90%;
-  }
-
-  .transparent-container h3 {
-    font-size: 20px;
-  }
-
-  .transparent-container p,
-  .footer p {
-    font-size: 14px;
-  }
-
-  .transparent-container a {
-    font-size: 16px;
-    padding: 8px 15px;
-  }
-
-  .footer {
-    height: 20%; /* Increased height for mobile view */
-  }
 }

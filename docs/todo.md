@@ -1,13 +1,14 @@
-add readme.md file 
+fix readme.md
+ - add screenshot
+ - fix link
 
-fix 2nd cont and footer margin / padding
+fix transparent 
 
-fix link for virtustotal
+add cloudflare turnsitle
 
-clean 1drive1hg acc
+add cf dns check and https
 
-Current Version:
+fix min button length 
 
-Beta:0.1
+fix padding min div.tr.container
 
-add github pages , and deployment with actions
