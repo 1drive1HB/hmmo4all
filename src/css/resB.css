@@ -76,3 +76,37 @@
     transform: scale(1.05);
   }
   
+  .steamPrice {
+    background: rgba(42, 26, 8, 0.80); /* Dark brown background with transparency */
+    color: #f0f0f0; /* Light gray text for contrast */
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+    font-size: 18px; /* Slightly larger text */
+    font-weight: bold; /* Bold text for emphasis */
+    padding: 12px 20px; /* Comfortable padding */
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    box-shadow: 
+        0 0 10px rgba(255, 165, 0, 0.5), /* Orange glow for a "game-like" effect */
+        inset 0 0 5px rgba(255, 255, 255, 0.1); /* Inner glow for depth */
+    text-shadow: 0 0 5px rgba(255, 165, 0, 0.5); /* Glowing text effect */
+    transition: all 0.3s ease; /* Smooth hover effect */
+    position: center;
+}
+
+/* Hover effect for interactivity */
+.steamPrice:hover {
+    background: rgba(52, 36, 18, 0.90); /* Slightly lighter on hover */
+    box-shadow: 
+        0 0 15px rgba(255, 165, 0, 0.8), /* Brighter glow on hover */
+        inset 0 0 10px rgba(255, 255, 255, 0.2); /* Stronger inner glow */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 10px rgba(255, 165, 0, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(255, 165, 0, 0.8); }
+    100% { box-shadow: 0 0 10px rgba(255, 165, 0, 0.5); }
+}
+.steamPrice {
+    animation: pulse 2s infinite;
+}
